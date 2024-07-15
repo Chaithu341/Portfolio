@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangiri Chethan Kumar - Personal Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        /* Global styles */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #000;
+            color: #fff;
+            scroll-behavior: smooth; /* Smooth scrolling behavior */
+        }
+
+        /* Header styles */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            animation: slideIn 1s;
+            background: linear-gradient(to right, #2af598, #009efd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Navigation styles */
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            color: #fdca40;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* Main content styles */
+        .content {
+            padding: 40px 20px;
+        }
+
+        /* Section styles */
+        .section {
+            margin-bottom: 60px;
+            animation: fadeIn 1.5s;
+        }
+
+        /* Section title styles */
+        h2 {
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 28px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #fdca40, #f7981c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            border-bottom: 3px solid #ffffff;
+        }
+
+        /* Paragraph and list item styles */
+        p, li {
+            font-size: 18px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Unordered list styles */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* List item styles */
+        li {
+            background: rgba(255, 255, 255, 0.2);
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s, background 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: left 0.3s;
+        }
+
+        li:hover::before {
+            left: 0;
+        }
+
+        li:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Contact section styles */
+        .contact {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            animation: slideIn 2s;
+        }
+
+        /* Contact link styles */
+        .contact a {
+            color: #fdca40;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .contact a:hover {
+            color: #ffffff;
+        }
+
+        /* Icon styles */
+        .icon {
+            margin-right: 10px;
+            color: #fdca40;
+        }
+
+        .icon:hover {
+            color: #ffffff;
+        }
+
+        /* Media queries for responsive design */
+        @media (min-width: 768px) {
+            .content {
+                padding: 60px 80px;
+            }
+
+            header {
+                font-size: 48px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        /* Particles.js canvas */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* GitHub Projects section styles */
+        .github-project {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .github-project a {
+            color: #fdca40;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .github-project a:hover {
+            color: #ffffff;
+        }
+
+        .github-description {
+            margin-left: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Particles.js background -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <header data-aos="fade-down">
+        <i class="fas fa-user icon"></i> MANGIRI CHETHAN KUMAR
+    </header>
+  
+    <!-- Navigation -->
+    <nav>
+        <a href="#career-objective">Career Objective</a>
+        <a href="#education">Education</a>
+        <a href="#internship-project-experience">Internship / Project Experience</a>
+        <a href="#areas-of-interest">Areas of Interest</a>
+        <a href="#technical-skills">Technical Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#extra-curricular-activities">Extra-Curricular Activities</a>
+        <a href="#github-projects">GitHub Projects</a>
+        <a href="#personal-details">Personal Details</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main content -->
+    <div class="content">
+        <!-- Career Objective section -->
+        <div id="career-objective" class="section" data-aos="fade-up">
+            <h2>Career Objective</h2>
+            <p>To secure a challenging position in a competitive environment where I can utilize my skills to contribute to the growth of the organization while expanding my knowledge and pushing my boundaries.</p>
+        </div>
+
+        <!-- Education section -->
+        <div id="education" class="section" data-aos="fade-up">
+            <h2>Education</h2>
+            <ul>
+                <li><i class="fas fa-graduation-cap icon"></i>B.Tech (CSE-CS) - 2025, Madanapalle Institute of Technology and Science, Madanapalle, JNTU Anantapur, 8.8 (Till 3-2 Semester)</li>
+                <li><i class="fas fa-graduation-cap icon"></i>Diploma (ECE) - 2022, Govt. Polytechnic College, Madanapalle, State Board of Technical Education and Training, 85.35%</li>
+                <li><i class="fas fa-graduation-cap icon"></i>Class X/S.S.C - 2019, Brilliant E.M High School, Madanapalle, Board of Secondary Education, Andhra Pradesh, 9.5</li>
+            </ul>
+        </div>
+
+        <!-- Internship / Project Experience section -->
+        <div id="internship-project-experience" class="section" data-aos="fade-up">
+            <h2>Internship / Project Experience</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-briefcase icon"></i><strong>Cyber Security Internship:</strong> IBM Skill Build
+                    <div class="github-description">Worked on cyber security projects to develop secure applications.</div>
+                </li>
+                <li>
+                    <i class="fas fa-briefcase icon"></i><strong>SQL Internship:</strong> Slash Mark
+                    <div class="github-description">Developed database management systems using SQL.</div>
+                </li>
+                <li>
+                    <i class="fas fa-project-diagram icon"></i><strong>Web Applications:</strong>
+                    <div class="github-description">Developed a To-Do List App, Stopwatch App, and Tic Tac Toe Game using AI tools like ChatGPT and Gemini APIs.</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Areas of Interest section -->
+        <div id="areas-of-interest" class="section" data-aos="fade-up">
+            <h2>Areas of Interest</h2>
+            <ul>
+                <li><i class="fas fa-laptop-code icon"></i>Cyber Security</li>
+                <li><i class="fas fa-network-wired icon"></i>Computer Networks</li>
+                <li><i class="fas fa-database icon"></i>SQL</li>
+            </ul>
+        </div>
+
+        <!-- Technical Skills section -->
+        <div id="technical-skills" class="section" data-aos="fade-up">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><i class="fas fa-code icon"></i>Languages: Python (Data Structures), SQL, Basic Java</li>
+                <li><i class="fas fa-tools icon"></i>Frameworks: Pandas, NumPy, ChatGPT API, Gemini API</li>
+                <li><i class="fas fa-database icon"></i>Tools: Excel, PowerPoint, MySQL</li>
+                <li><i class="fas fa-desktop icon"></i>Platforms: PyCharm, Visual Studio Code, GitHub</li>
+                <li><i class="fas fa-server icon"></i>Operating Systems: Windows, Linux</li>
+            </ul>
+        </div>
+
+        <!-- Certifications section -->
+        <div id="certifications" class="section" data-aos="fade-up">
+            <h2>Certifications</h2>
+            <ul>
+                <li><i class="fas fa-certificate icon"></i>Solved 200+ problems on Leetcode Platform</li>
+                <li><i class="fas fa-certificate icon"></i>Designed prompts using Vertex AI</li>
+                <li><i class="fas fa-certificate icon"></i>Learned about Generative AI, Responsible AI, and Large Language Models (LLMs)</li>
+                <li><i class="fas fa-certificate icon"></i>Silver certificate in “Privacy and Security in Online Social Media” from “NPTEL” by IIT Hyderabad, April 2024</li>
+                <li><i class="fas fa-certificate icon"></i>Course on “CCNA” from “Cisco”</li>
+                <li><i class="fas fa-certificate icon"></i>Course on “SQL-DBMS” from “SQL-DBMS”</li>
+                <li><i class="fas fa-certificate icon"></i>Course on “Programming With Python 3x” from “Simplilearn”, 2024</li>
+                <li><i class="fas fa-certificate icon"></i>Course on “Cyber Security Fundamentals” from “IBM Skill Build”, 2023</li>
+                <li><i class="fas fa-certificate icon"></i>Course on “Cloud Computing” from “Great Learnings”, 2024</li>
+            </ul>
+        </div>
+
+        <!-- Extra-Curricular Activities section -->
+        <div id="extra-curricular-activities" class="section" data-aos="fade-up">
+            <h2>Extra-Curricular Activities</h2>
+            <ul>
+                <li><i class="fas fa-users icon"></i>Active participant in SIH Hackathon, showcasing problem-solving abilities and teamwork</li>
+                <li><i class="fas fa-table-tennis icon"></i>Represented NBKR College in Table Tennis tournaments, demonstrating discipline and sportsmanship</li>
+            </ul>
+        </div>
+
+        <!-- GitHub Projects section -->
+        <div class="section" data-aos="fade-up">
+            <h2>GitHub Projects</h2>
+            <div class="github-project">
+                <i class="fab fa-github icon"></i><a href="https://github.com/Chaithu341/Keylogger">SPYTracker Project</a>
+                <p class="github-description">A sophisticated keylogger software developed with Python and Tkinter, designed for advanced keystroke capturing and application tracking.</p>
+            </div>
+            <div class="github-project">
+                <i class="fab fa-github icon"></i><a href="https://github.com/Chaithu341/Student-Database-Management">Student Database Project</a>
+                <p class="github-description">A comprehensive system for managing student records, including personal details and performance data, developed using Python and SQLite.</p>
+            </div>
+            <div class="github-project">
+                <i class="fab fa-github icon"></i><a href="https://github.com/Chaithu341/Food-estimation">AI Food Estimation Project</a>
+                <p class="github-description">An AI-powered application for food recognition and calorie estimation, leveraging advanced AI tools and APIs.</p>
+            </div>
+            <div class="github-project">
+                <i class="fab fa-github icon"></i><a href="https://github.com/Chaithu341/To-Do-List">To-Do List Project</a>
+                <p class="github-description">A simple and intuitive to-do list application, helping users manage their tasks efficiently.</p>
+            </div>
+            <div class="github-project">
+                <i class="fab fa-github icon"></i><a href="https://github.com/Chaithu341/Stopwatch">Stopwatch Project</a>
+                <p class="github-description">A basic stopwatch application with start, stop, and reset functionalities, designed for ease of use.</p>
+            </div>
+            <div class="github-project">
+                <i class="fab fa-github icon"></i><a href="https://github.com/Chaithu341/Tic-Tac-Toe">Tic Tac Toe Project</a>
+                <p class="github-description">A classic Tic Tac Toe game developed with a user-friendly interface, providing entertainment and challenge.</p>
+            </div>
+        </div>
+
+        <!-- Personal Details section -->
+        <div id="personal-details" class="section" data-aos="fade-up">
+            <h2>Personal Details</h2>
+            <ul>
+                <li><i class="fas fa-user icon"></i>Name: Mangiri Chethan Kumar</li>
+                <li><i class="fas fa-envelope icon"></i>Email: chethankumarmangiri@gmail.com</li>
+                <li><i class="fas fa-phone icon"></i>Contact Number: 6301343533</li>
+            </ul>
+        </div>
+
+        <!-- Contact section -->
+        <div id="contact" class="contact" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me via email at <a href="mailto:chethankumarmangiri@gmail.com">chethankumarmangiri@gmail.com</a> or call me at 6301343533.</p>
+        </div>
+    </div>
+<!-- Footer section -->
+    <footer class="contact" data-aos="fade-up">
+        <p>Connect with me:</p>
+        <a href="https://www.linkedin.com/in/chethan-kumar-mangiri-476b62217/" target="_blank"><i class="fab fa-linkedin icon"></i></a>
+        <a href="https://github.com/Chaithu341" target="_blank"><i class="fab fa-github icon"></i></a>
+    </footer>
+
+    <!-- AOS and Particles.js scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        AOS.init();
+
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#ffffff' },
+                shape: {
+                    type: 'circle',
+                    stroke: { width: 0, color: '#000000' },
+                    polygon: { nb_sides: 5 },
+                    image: { src: 'img/github.svg', width: 100, height: 100 }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#ffffff',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: { enable: false, rotateX: 600, rotateY: 1200 }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 400, line_linked: { opacity: 1 } },
+                    bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+                    repulse: { distance: 200, duration: 0.4 },
+                    push: { particles_nb: 4 },
+                    remove: { particles_nb: 2 }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
