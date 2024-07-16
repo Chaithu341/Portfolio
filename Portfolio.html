@@ -20,12 +20,12 @@
             scroll-behavior: smooth; /* Smooth scrolling behavior */
         }
 
-        /* Header styles */
+/* Header styles */
         header {
             background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             text-align: center;
-            font-size: 36px;
+            font-size: 24px;
             font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -37,34 +37,57 @@
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
         }
 
+        @media (min-width: 768px) {
+            header {
+                font-size: 36px;
+            }
+        }
+
         /* Navigation styles */
         nav {
             background: rgba(0, 0, 0, 0.8);
             text-align: center;
             padding: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
             color: #fdca40;
-            margin: 0 15px;
+            margin: 0 10px;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
+            display: inline-block;
+            padding: 10px;
         }
 
         nav a:hover {
             color: #ffffff;
         }
 
+        @media (min-width: 768px) {
+            nav a {
+                margin: 0 15px;
+            }
+        }
+
         /* Main content styles */
         .content {
-            padding: 40px 20px;
+            padding: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .content {
+                padding: 40px 20px;
+            }
         }
 
         /* Section styles */
         .section {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             animation: fadeIn 1.5s;
         }
 
@@ -72,7 +95,7 @@
         h2 {
             padding-bottom: 10px;
             margin-bottom: 20px;
-            font-size: 28px;
+            font-size: 24px;
             text-transform: uppercase;
             background: linear-gradient(to right, #fdca40, #f7981c);
             -webkit-background-clip: text;
@@ -81,11 +104,23 @@
             border-bottom: 3px solid #ffffff;
         }
 
+        @media (min-width: 768px) {
+            h2 {
+                font-size: 28px;
+            }
+        }
+
         /* Paragraph and list item styles */
         p, li {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.6;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        @media (min-width: 768px) {
+            p, li {
+                font-size: 18px;
+            }
         }
 
         /* Unordered list styles */
@@ -97,7 +132,7 @@
         /* List item styles */
         li {
             background: rgba(255, 255, 255, 0.2);
-            margin: 15px 0;
+            margin: 10px 0;
             padding: 15px;
             border-radius: 8px;
             transition: transform 0.3s, background 0.3s;
@@ -128,7 +163,7 @@
         /* Contact section styles */
         .contact {
             background: rgba(0, 0, 0, 0.8);
-            padding: 30px;
+            padding: 20px;
             border-radius: 10px;
             text-align: center;
             animation: slideIn 2s;
@@ -184,8 +219,16 @@
         /* GitHub Projects section styles */
         .github-project {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
             margin-bottom: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .github-project {
+                flex-direction: row;
+                align-items: center;
+            }
         }
 
         .github-project a {
@@ -193,15 +236,24 @@
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
+            margin-bottom: 10px;
         }
 
-        .github-project a:hover {
-            color: #ffffff;
+        @media (min-width: 768px) {
+            .github-project a {
+                margin-bottom: 0;
+                margin-right: 10px;
+            }
         }
 
         .github-description {
-            margin-left: 10px;
-            font-size: 16px;
+            font-size: 14px;
+        }
+
+        @media (min-width: 768px) {
+            .github-description {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -218,7 +270,7 @@
     <nav>
         <a href="#career-objective">Career Objective</a>
         <a href="#education">Education</a>
-        <a href="#internship-project-experience">Internship / Project </a>
+        <a href="#internship-project-experience">Internship / Project Experience</a>
         <a href="#areas-of-interest">Areas of Interest</a>
         <a href="#technical-skills">Technical Skills</a>
         <a href="#certifications">Certifications</a>
@@ -235,6 +287,7 @@
             <h2>Career Objective</h2>
             <p>To secure a challenging position in a competitive environment where I can utilize my skills to contribute to the growth of the organization while expanding my knowledge and pushing my boundaries.</p>
         </div>
+
 
         <!-- Education section -->
         <div id="education" class="section" data-aos="fade-up">
@@ -328,15 +381,15 @@
                 <p class="github-description">An AI-powered application for food recognition and calorie estimation, leveraging advanced AI tools and APIs.</p>
             </div>
             <div class="github-project">
-                <i class="fab fa-github icon"></i><a href="https://github.com/Chaithu341/To-Do-List">To-Do List Project</a>
+                <i class="fab fa-github icon"></i><a href="https://chaithu341.github.io/To-Do-List">To-Do List Project</a>
                 <p class="github-description">A simple and intuitive to-do list application, helping users manage their tasks efficiently.</p>
             </div>
             <div class="github-project">
-                <i class="fab fa-github icon"></i><a href="https://github.com/Chaithu341/Stopwatch">Stopwatch Project</a>
+                <i class="fab fa-github icon"></i><a href="https://chaithu341.github.io/Stopwatch/b.html">Stopwatch Project</a>
                 <p class="github-description">A basic stopwatch application with start, stop, and reset functionalities, designed for ease of use.</p>
             </div>
             <div class="github-project">
-                <i class="fab fa-github icon"></i><a href="https://github.com/Chaithu341/Tic-Tac-Toe">Tic Tac Toe Project</a>
+                <i class="fab fa-github icon"></i><a href="https://chaithu341.github.io/Tic-Tac-Toe/a.html">Tic Tac Toe Project</a>
                 <p class="github-description">A classic Tic Tac Toe game developed with a user-friendly interface, providing entertainment and challenge.</p>
             </div>
         </div>
@@ -354,7 +407,12 @@
         <!-- Contact section -->
         <div id="contact" class="contact" data-aos="fade-up">
             <h2>Contact</h2>
-            <p>Feel free to reach out to me via email at <a href="mailto:chethankumarmangiri@gmail.com">chethankumarmangiri@gmail.com</a> or call me at 6301343533.</p>
+            <p>If you would like to get in touch with me, please feel free to reach out via email or phone. You can also connect with me on my social media profiles and view my projects on GitHub.</p>
+            <a href="mailto:chethankumarmangiri@gmail.com"><i class="fas fa-envelope icon"></i>chethankumarmangiri@gmail.com</a>
+            <br>
+            <a href="tel:+916301343533"><i class="fas fa-phone icon"></i>+91 6301343533</a>
+            <br>
+            <a href="https://github.com/Chaithu341" target="_blank"><i class="fab fa-github icon"></i>GitHub Profile</a>
         </div>
     </div>
 <!-- Footer section -->
